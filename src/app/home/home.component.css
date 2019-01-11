@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.advice {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  font-style: italic;
+  color: #333333;
+}
+
+@media only screen and (max-width: 500px) {
+
+}
+@media only screen and (min-width: 500.1px) {
+  .res-wrapper {
+    margin-bottom: 75px;
+  }
+}
+@media only screen and (max-width: 768px) {
+
+}

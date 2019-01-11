@@ -1,0 +1,8 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 element">
+  <div class="wrapper" *ngIf="cons.length !== 0">
+      <h2>Cons</h2>
+      <ul class="list-group">
+        <li *ngFor="let item of cons" class="list-group-item d-flex" #argumentItem>{{ item }}<i class="fas fa-times ml-auto" (click)="deleteItem($event)"></i></li>
+      </ul>
+  </div>
+</div>

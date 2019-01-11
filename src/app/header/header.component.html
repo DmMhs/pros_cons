@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark">
+  <div class="container-fluid container">
+    <a class="navbar-brand">
+      <i class="fas fa-thumbs-up"></i> PROS | CONS <i class="fas fa-thumbs-down"></i>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="cursor: pointer" (click)="onLogout()">Logout</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>

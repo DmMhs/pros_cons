@@ -1,0 +1,40 @@
+<h5 style="text-align: center; margin-top: 10px;">Log in or Sign up to enter</h5>
+<form [formGroup]="signupForm" (ngSubmit)="onSignup()" >
+  <h6>Sign Up Here</h6>
+  <div class="form-group">
+    <label for="email">Mail</label>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+      class="form-control"
+    >
+    <small *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched"><i class="fas fa-exclamation-circle"></i> Email does not match required pattern - some@mail.com</small>
+  </div>
+  <div formGroupName="passwordData">
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        class="form-control"
+      >
+      <small *ngIf="signupForm.get('passwordData.password').invalid && signupForm.get('passwordData.password').touched"><i class="fas fa-exclamation-circle"></i>  6-100 characters, one capital letter and one digit required!</small>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        class="form-control"
+      >
+      <small *ngIf="signupForm.get('passwordData').errors && signupForm.get('passwordData.confirmPassword').touched"><i class="fas fa-exclamation-circle"></i> confirmation not matches!</small>
+    </div>
+  </div>
+
+<button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary">Sign Up</button>
+  <p style="margin-top: 7px">Already have an account ? <a class="login" (click)="onLogIn()">Log In</a></p>
+</form>
+<button class="btn btn-success google" (click)="onSignupWithGoogle()"><i class="fab fa-google"></i> Sign Up With Google</button>

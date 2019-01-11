@@ -1,0 +1,35 @@
+footer {
+  background-color: whitesmoke;
+  color: #333333;
+}
+span {
+  text-align: center;
+}
+.madeBy {
+  font-style: italic;
+}
+
+.fa-heart {
+  transition: 0.5s;
+}
+
+.fa-heart:hover {
+  color: tomato;
+  transition: 0.5s;
+}
+
+.fa-github {
+  color: #333333;
+  transition: 0.5s;
+}
+
+.fa-github:hover {
+  color: skyblue;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 500px) {
+  span {
+    font-size: 12px;
+  }
+}

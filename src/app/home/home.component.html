@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="wrapper">
+      <div class="row">
+        <app-form></app-form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row res-wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 res">
+    <p *ngIf="prosLength > consLength" class="advice"> For now you have more "pros" arguments! </p>
+    <p *ngIf="prosLength < consLength" class="advice"> For now you have more "cons" arguments! </p>
+    <p *ngIf="prosLength === consLength && prosLength !== 0 && consLength !== 0" class="advice"> Both sides are equal. Flip a coin! </p>
+    <p *ngIf="prosLength === 0 && consLength === 0" class="advice"> You need some arguments! </p>
+    <app-pros></app-pros>
+    <app-cons></app-cons>
+  </div>
+</div>
+

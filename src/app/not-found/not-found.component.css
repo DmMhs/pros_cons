@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  margin-top: 100%;
+  color: #a52a2a;
+}
+h3 i {
+  font-size: 3rem;
+  color: #333333;
+}

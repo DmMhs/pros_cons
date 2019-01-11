@@ -1,0 +1,39 @@
+<div class="col-xs-12 col-sm-12 wrapper">
+  <form #f="ngForm">
+    <div class="form-group">
+      <div class="row input">
+          <div class="col-xs-12 col-sm-10">
+            <input
+              type="text"
+              name="argument"
+              class="form-control input-group"
+              placeholder="Type in some pros or cons ..."
+              required
+              minlength="3"
+              maxlength="25"
+              ngModel
+              #inputVal="ngModel">
+            </div>
+            <div class="col-xs-12 col-sm-2 buttons-wrapper">
+              <div class="row buttons">
+                <button
+                  [disabled]="f.invalid"
+                  class="btn btn-success onfocus"
+                  (click)="onProsClicked()"
+                ><i class="fas fa-thumbs-up"></i>
+                </button>
+                <button
+                  [disabled]="f.invalid"
+                  class="btn btn-danger"
+                  (click)="onConsClicked()"
+                ><i class="fas fa-thumbs-down"></i>
+                </button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </form>
+</div>
+<ul class="notification">
+  <li *ngIf="f.touched && unique === false"><i class="fas fa-exclamation-circle"></i> unique values only </li>
+</ul>

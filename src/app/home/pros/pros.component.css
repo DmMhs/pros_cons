@@ -1,0 +1,63 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-weight: lighter;
+  color: #28a745;
+  text-align: center;
+}
+
+ul {
+  margin: 10px 20px;
+}
+
+li {
+  width: 285px;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.fa-times {
+  color: lightgray;
+}
+.fa-times:hover {
+  color: crimson;
+  transition: 0.6s;
+}
+
+.empty {
+  font-weight: lighter;
+  font-style: italic;
+  color: #333333;
+}
+
+@media only screen and (max-width: 576px) {
+  .element {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 576.1px) {
+  .element {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 576.1px) and (max-width: 768px) {
+  li {
+    width: 220px;
+    font-size: 13px
+  }
+
+  ul {
+    margin: 5px 0px;
+  }
+}

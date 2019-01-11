@@ -1,0 +1,37 @@
+<h5 style="text-align: center; margin-top: 10px;">Log in or Sign up to enter</h5>
+<form (ngSubmit)="onLogin(f)" #f="ngForm">
+  <h6>Log In Here</h6>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      ngModel
+      required
+      email
+      #email="ngModel"
+    >
+    <small *ngIf="email.invalid && email.touched"><i class="fas fa-exclamation-circle"></i> Email does not match required pattern - some@mail.com</small>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      class="form-control"
+      ngModel
+      minlength="6"
+      required
+      #password="ngModel"
+    >
+    <small *ngIf="password.invalid && password.touched"><i class="fas fa-exclamation-circle"></i> at least 6 characters!</small>
+  </div>
+  <button
+    [disabled]="f.invalid"
+    type="submit"
+    class="btn btn-primary"
+  >Log In
+  </button>
+  <p style="margin-top: 7px">Still have no account ? <a class="login" (click)="onSignup()">Sign Up</a></p>
+</form>

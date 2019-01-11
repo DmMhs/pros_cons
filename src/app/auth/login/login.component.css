@@ -1,0 +1,22 @@
+form {
+  margin-top: 50px;
+}
+
+small {
+  color: darkred;
+}
+p {
+  color: gray;
+}
+p .login {
+  cursor: pointer;
+  color: skyblue;
+}
+p .login:hover {
+  color: rgb(109, 191, 223);
+}
+@media only screen and (min-width: 768px) {
+  input {
+    width: 50%;
+  }
+}
